@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Brandon";
+  src: url("/apps/abbott/concentrate/fonts/Brandon_reg.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brandon";
+  src: url("/apps/abbott/concentrate/fonts/Brandon_blk.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brandon";
+  src: url("/apps/abbott/concentrate/fonts/Brandon_light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@theme {
+  --color-futzia-abbott: #e899af;
+  --color-rosa-abbott: #d787b5;
+  --color-rosa-claro-abbott: #f4d9e3;
+  --color-morado-claro-abbott: #753bbd;
+  --color-morado-oscuro-abbott: #3f1f6b;
+  --gradient-abbott: 45deg, rgba(86,43,133,1) 20%, rgba(169,83,156,1) 50%, rgba(233,154,176,1) 80%;
+  --font-brandon: "Brandon", sans-serif;
+  --font-georgia: Georgia, serif;
+}
