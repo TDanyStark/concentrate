@@ -31,3 +31,12 @@
   --font-brandon: "Brandon", sans-serif;
   --font-georgia: Georgia, serif;
 }
+
+/* Vanilla CSS for flip card */
+.card { perspective: 800px;}
+.card__content {transform-style: preserve-3d;}
+.flipped {transform: rotateY(.5turn);}
+
+.card__front,
+.card__back { backface-visibility: hidden;}
+.card__back{ transform: rotateY(.5turn);}

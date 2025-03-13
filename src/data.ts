@@ -5,6 +5,9 @@ export type Perfil = {
   edad: string;
   text: string;
   AOC: string;
+  uniqueId?: string;
+  matched?: boolean;
+  flipped?: boolean;
 };
 
 export type Perfiles = Perfil[];
