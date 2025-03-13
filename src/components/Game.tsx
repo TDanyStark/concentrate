@@ -19,6 +19,12 @@ const shuffleCards = (cards: Perfiles) => {
 const Game = () => {
   const [cards, setCards] = useState<Perfiles>(shuffleCards(perfilesMujeres));
 
+    // Reiniciar el juego
+    const resetGame = () => {
+      const shuffledCards = shuffleCards(perfilesMujeres);
+      setCards(shuffledCards);
+    };
+
   const handleCardClick = (clickedCard: Perfil) => {
     // Si la carta ya está volteada o ya fue emparejada, no hacer nada
     // convertir flipped a true
