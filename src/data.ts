@@ -1,4 +1,15 @@
-const perfilesMujeres = [
+export type Perfil = {
+  id: number;
+  img: string;
+  nombre: string;
+  edad: string;
+  text: string;
+  AOC: string;
+};
+
+export type Perfiles = Perfil[];
+
+export const perfilesMujeres = [
   {
     id: 1,
     img: '/bianca',
