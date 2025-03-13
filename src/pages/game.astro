@@ -6,7 +6,6 @@ import AbbottConBackground from "@/components/AbbottConBackground.astro";
 import Banner from "@/sections/Banner.astro";
 import GameFocus from "@/components/Game";
 import Reference from "@/components/Reference.astro";
-import {perfilesMujeres} from "@/data";
 ---
 
 <Layout title="Concentrate">
@@ -14,7 +13,7 @@ import {perfilesMujeres} from "@/data";
   <main>
     <Banner />
     <Brands align="justify-start" />
-    <GameFocus data={perfilesMujeres} client:load  />
+    <GameFocus client:load  />
     <Reference/>
   </main>
   <footer>

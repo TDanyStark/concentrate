@@ -1,16 +1,19 @@
+import { URL_BASE } from "@/config";
 import type { Perfil, Perfiles } from "@/data";
+import {perfilesMujeres} from "@/data";
+import { useState } from "react";
 
-interface GameProps {
-  data: Perfiles;
-}
 
-const Game = ({ data }: GameProps) => {
+const URL_IMGS = `${URL_BASE}/img/pacientes`;
+
+const Game = () => {
+  const [data, setData] = useState<Perfiles>(perfilesMujeres);
   return (
     <div>
       {
         data.map((item: Perfil) => (
           <div key={item.id}>
-            <img src={item.img} alt={item.nombre} />
+            <img src={`${URL_IMGS}/${item.img}.webp`} alt={item.nombre} />
             <h2>{item.nombre}</h2>
             <p>{item.edad}</p>
             <p>{item.text}</p>
