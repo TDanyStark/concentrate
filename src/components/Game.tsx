@@ -2,6 +2,10 @@ import type { Perfiles, Perfil } from "@/data";
 import { perfilesMujeres } from "@/data";
 import { useState, useEffect } from "react";
 import Card from "./Card";
+import confetti from "canvas-confetti";
+import executeAudio from "@/utils/executeAudio";
+import useAudios from "@/hooks/useAudios";
+
 
 
 // Función para duplicar y mezclar las cartas
@@ -19,11 +23,13 @@ const shuffleCards = (cards: Perfiles) => {
 const Game = () => {
   const [cards, setCards] = useState<Perfiles>(shuffleCards(perfilesMujeres));
   const [comparing, setComparing] = useState(false);
+  const { confettiAudio, successEndAudio } = useAudios();
 
     // Reiniciar el juego
     const resetGame = () => {
       const shuffledCards = shuffleCards(perfilesMujeres);
       setCards(shuffledCards);
+      setComparing(false);
     };
 
   const handleCardClick = (clickedCard: Perfil) => {
@@ -56,6 +62,28 @@ const Game = () => {
         });
         setCards(matchedCards);
         setComparing(false);
+        // Lanzar confeti solo si todas las cartas están emparejadas
+        if (matchedCards.every(card => card.matched)) {
+          executeAudio(successEndAudio);
+          executeAudio(confettiAudio);
+
+          confetti({
+            particleCount: 200,
+            angle: 60,
+            spread: 70,
+            origin: { x: 0, y: 0.9 },
+          });
+          confetti({
+            particleCount: 200,
+            angle: 120,
+            spread: 70,
+            origin: { x: 1, y: 0.9 },
+          });
+          setTimeout(() => {
+            resetGame();
+          }, 3000);
+        }
+
       } else {
         // Si las cartas no coinciden, voltearlas de nuevo después de un tiempo
         setTimeout(() => {
@@ -71,7 +99,6 @@ const Game = () => {
       }
     }
   }
-  console.log(cards);
   
   return (
     <div className="flex flex-col items-center p-4 text-white">
