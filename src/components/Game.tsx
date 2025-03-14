@@ -18,6 +18,7 @@ const shuffleCards = (cards: Perfiles) => {
 
 const Game = () => {
   const [cards, setCards] = useState<Perfiles>(shuffleCards(perfilesMujeres));
+  const [comparing, setComparing] = useState(false);
 
     // Reiniciar el juego
     const resetGame = () => {
@@ -27,7 +28,9 @@ const Game = () => {
 
   const handleCardClick = (clickedCard: Perfil) => {
     // Si la carta ya está volteada o ya fue emparejada, no hacer nada
-    // convertir flipped a true
+    if (clickedCard.flipped || clickedCard.matched || comparing) return;
+    
+    // voltear la carta
     const newCards = cards.map(card => {
       if (card.uniqueId === clickedCard.uniqueId) {
         return { ...card, flipped: true };
@@ -36,8 +39,39 @@ const Game = () => {
     });
     setCards(newCards);
 
+    // Obtener las cartas volteadas
+    const flippedCards = newCards.filter(card => card.flipped && !card.matched);
+
+    // Si hay dos cartas volteadas, compararlas
+    if (flippedCards.length === 2) {
+      setComparing(true);
+      const [firstCard, secondCard] = flippedCards;
+      if (firstCard.id === secondCard.id) {
+        // Si las cartas coinciden, marcarlas como emparejadas
+        const matchedCards = newCards.map(card => {
+          if (card.id === firstCard.id) {
+            return { ...card, matched: true };
+          }
+          return card;
+        });
+        setCards(matchedCards);
+        setComparing(false);
+      } else {
+        // Si las cartas no coinciden, voltearlas de nuevo después de un tiempo
+        setTimeout(() => {
+          const unflippedCards = newCards.map(card => {
+            if (card.flipped && !card.matched) {
+              return { ...card, flipped: false };
+            }
+            return card;
+          });
+          setCards(unflippedCards);
+          setComparing(false);
+        }, 1000);
+      }
+    }
   }
-  
+  console.log(cards);
   
   return (
     <div className="flex flex-col items-center p-4 text-white">

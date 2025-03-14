@@ -28,7 +28,7 @@ const Card = ({
 }: Props) => {
   return (
     <article
-      className="card w-full h-64 relative cursor-pointer font-georgia"
+      className="card w-full h-64 relative cursor-pointer font-georgia select-none"
       onClick={() =>
         handleCardClick({ id, img, nombre, edad, text, AOC, uniqueId, flipped })
       }
