@@ -40,7 +40,7 @@ const Game = () => {
   
   
   return (
-    <div className="flex flex-col items-center p-4">
+    <div className="flex flex-col items-center p-4 text-white">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full max-w-[1400px] mx-auto">
         {cards.map((card) => (
           <Card key={card.uniqueId} {...card} handleCardClick={handleCardClick} />
