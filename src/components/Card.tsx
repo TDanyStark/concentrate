@@ -7,13 +7,14 @@ interface Props {
   nombre: string;
   edad: string;
   text: string;
-  AOC: string;
+  box: string;
   flipped?: boolean;
   uniqueId?: string;
   handleCardClick: (card: Perfil) => void;
 }
 
 const URL_IMGS = `${URL_BASE}/img/pacientes`;
+const URL_IMGS_BOX = `${URL_BASE}/img/brand_boxes`;
 
 const Card = ({
   id,
@@ -21,7 +22,7 @@ const Card = ({
   nombre,
   edad,
   text,
-  AOC,
+  box,
   flipped,
   uniqueId,
   handleCardClick,
@@ -30,7 +31,7 @@ const Card = ({
     <article
       className="card w-full h-64 relative cursor-pointer font-georgia select-none"
       onClick={() =>
-        handleCardClick({ id, img, nombre, edad, text, AOC, uniqueId, flipped })
+        handleCardClick({ id, img, nombre, edad, text, box, uniqueId, flipped })
       }
     >
       <div
@@ -57,9 +58,10 @@ const Card = ({
             <div className="p-3 w-[50%]">
               <h3 className="font-bold text-2xl leading-6 text-rosa-abbott">{nombre}</h3>
               <p className="text-2xl leading-6 text-rosa-abbott">{edad}</p>
-              <p className="text-base mt-1">{text}</p>
-              <p className="text-base mt-1 font-bold">AOC sugerido:</p>
-              <p className="text-base">{AOC}</p>
+              <p className="text-sm mt-1">{text}</p>
+              <div className="mt-4">
+                <img src={`${URL_IMGS_BOX}/${box}.webp`} alt={nombre} className="h-16" />
+              </div>
             </div>
           </div>
         </div>

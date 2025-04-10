@@ -4,7 +4,7 @@ export type Perfil = {
   nombre: string;
   edad: string;
   text: string;
-  AOC: string;
+  box: string;
   uniqueId?: string;
   matched?: boolean;
   flipped?: boolean;
@@ -19,7 +19,7 @@ export const perfilesMujeres = [
     nombre: 'Bianca',
     edad: '29 años',
     text: 'Ciclos irregulares, dismenorrea severa.',
-    AOC: 'Bellaface'
+    box: 'bellaface'
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ export const perfilesMujeres = [
     nombre: 'Andrea',
     edad: '22 años',
     text: 'Deportista, teme que su anticonceptivo afecte su peso corporal.',
-    AOC: 'MIA'
+    box: 'mia'
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ export const perfilesMujeres = [
     nombre: 'Manuela',
     edad: '17 años',
     text: 'Necesidad anticonceptiva, acné y seborrea moderados.',
-    AOC: 'Bellaface'
+    box: 'bellaface'
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ export const perfilesMujeres = [
     nombre: 'Paola',
     edad: '40 años',
     text: 'Síntomas físicos del síndrome premenstrual.',
-    AOC: 'MIA20'
+    box: 'mia20'
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ export const perfilesMujeres = [
     nombre: 'Mónica',
     edad: '33 años',
     text: 'Síntomas emocionales relacionados con el ciclo menstrual.',
-    AOC: 'MIA20'
+    box: 'mia20'
   },
   {
     id: 6,
@@ -59,7 +59,7 @@ export const perfilesMujeres = [
     nombre: 'Alejandra',
     edad: '38 años',
     text: 'Dismenorrea y sangrado menstrual abundante, sedentaria.',
-    AOC: 'Bellaface20'
+    box: 'bellaface20'
   },
   {
     id: 7,
@@ -67,7 +67,7 @@ export const perfilesMujeres = [
     nombre: 'Diana',
     edad: '19 años',
     text: 'Se siente hinchada y pesada cerca de su período menstrual, acné hormonal.',
-    AOC: 'MIA'
+    box: 'mia'
   },
   {
     id: 8,
@@ -75,6 +75,6 @@ export const perfilesMujeres = [
     nombre: 'Emilia',
     edad: '35 años',
     text: 'Fumadora (menos de 15 cigarrillos al día), sangrados menstruales prolongados.',
-    AOC: 'Bellaface20'
+    box: 'bellaface20'
   }
 ];
