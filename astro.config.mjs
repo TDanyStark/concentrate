@@ -7,8 +7,8 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  base: '/apps/abbott/concentrate',
-  outDir: 'apps/abbott/concentrate',
+  base: '/apps/abbott/cr/concentrate',
+  outDir: 'apps/abbott/cr/concentrate',
   vite: {
     plugins: [tailwindcss()]
   },

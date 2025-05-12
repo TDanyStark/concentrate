@@ -1,1 +1,1 @@
-export const URL_BASE = '/apps/abbott/concentrate';
+export const URL_BASE = '/apps/abbott/cr/concentrate';
