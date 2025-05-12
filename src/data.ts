@@ -55,26 +55,10 @@ export const perfilesMujeres = [
   },
   {
     id: 6,
-    img: '/alejandra',
-    nombre: 'Alejandra',
-    edad: '38 años',
-    text: 'Dismenorrea y sangrado menstrual abundante, sedentaria.',
-    box: 'bellaface20'
-  },
-  {
-    id: 7,
     img: '/diana',
     nombre: 'Diana',
     edad: '19 años',
     text: 'Se siente hinchada y pesada cerca de su período menstrual, acné hormonal.',
     box: 'mia'
-  },
-  {
-    id: 8,
-    img: '/emilia',
-    nombre: 'Emilia',
-    edad: '35 años',
-    text: 'Fumadora (menos de 15 cigarrillos al día), sangrados menstruales prolongados.',
-    box: 'bellaface20'
   }
 ];
