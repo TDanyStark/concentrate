@@ -1,9 +1,10 @@
 ---
 interface Props{
   size: number;
+  color?: string;
 }
 
-const {size} = Astro.props;
+const {size, color = "text-white"} = Astro.props;
 
 const firstPartMobile = `${Math.round(size*2)}rem`;
 const firstPartDesktop = `${Math.round(size*3)}rem`;
@@ -12,13 +13,13 @@ const secondPartMobile = `${Math.round(size*3)}rem`;
 const secondPartDesktop = `${Math.round(size*4)}rem`;
 ---
 
-<h1 class=`text-white font-light first-part`>
-  CONCÉNTRATE EN 
-  <span class="font-bold block second-part">
+<h1 class={`text-white font-light first-part`}>
+  CONCÉNTRATE EN
+  <span class={`font-bold block second-part ${color}`}>
     LAS MUJERES
   </span> 
   <span
-    class=`font-bold block second-part`>
+    class=`font-bold block second-part ${color}`>
     PODEROSAS
   </span>
 </h1>
