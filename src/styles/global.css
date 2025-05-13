@@ -2,21 +2,21 @@
 
 @font-face {
   font-family: "Brandon";
-  src: url("/apps/abbott/cr/concentrate/fonts/Brandon_reg.woff") format("woff");
+  src: url("/apps/abbott/concentrate/fonts/Brandon_reg.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Brandon";
-  src: url("/apps/abbott/cr/concentrate/fonts/Brandon_blk.woff") format("woff");
+  src: url("/apps/abbott/concentrate/fonts/Brandon_blk.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Brandon";
-  src: url("/apps/abbott/cr/concentrate/fonts/Brandon_light.woff") format("woff");
+  src: url("/apps/abbott/concentrate/fonts/Brandon_light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
