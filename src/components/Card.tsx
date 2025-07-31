@@ -8,6 +8,7 @@ interface Props {
   edad: string;
   text: string;
   box: string;
+  ref: string;
   flipped?: boolean;
   uniqueId?: string;
   handleCardClick: (card: Perfil) => void;
@@ -23,6 +24,7 @@ const Card = ({
   edad,
   text,
   box,
+  ref,
   flipped,
   uniqueId,
   handleCardClick,
@@ -31,7 +33,7 @@ const Card = ({
     <article
       className="card w-full h-64 relative cursor-pointer font-georgia select-none"
       onClick={() =>
-        handleCardClick({ id, img, nombre, edad, text, box, uniqueId, flipped })
+        handleCardClick({ id, img, nombre, edad, text, box, ref, uniqueId, flipped })
       }
     >
       <div
@@ -58,7 +60,7 @@ const Card = ({
             <div className="p-3 w-[50%]">
               <h3 className="font-bold text-2xl leading-6 text-rosa-abbott">{nombre}</h3>
               <p className="text-2xl leading-6 text-rosa-abbott">{edad}</p>
-              <p className="text-sm mt-1">{text}</p>
+              <p className="text-sm mt-1">{text}<sup className="text-xs">{ref}</sup></p>
               <div className="mt-4">
                 <img src={`${URL_IMGS_BOX}/${box}.webp`} alt={nombre} className="h-16" />
               </div>
