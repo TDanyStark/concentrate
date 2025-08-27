@@ -64,9 +64,9 @@ export const perfilesMujeres = [
     img: '/alejandra',
     nombre: 'Alejandra',
     edad: '38 años',
-    text: 'Dismenorrea y sangrado menstrual abundante, sedentaria.',
+    text: 'hirsutismo.',
     box: 'bellaface20'
-    ,ref: '5'
+    ,ref: '6'
   },
   {
     id: 7,
@@ -82,7 +82,7 @@ export const perfilesMujeres = [
     img: '/emilia',
     nombre: 'Emilia',
     edad: '35 años',
-    text: 'Fumadora (menos de 15 cigarrillos al día), sangrados menstruales prolongados.',
+    text: 'Fumadora (menos de 15 cigarrillos al día), con seborrea y acné inflamatorio moderado.',
     box: 'bellaface20'
     ,ref: '5'
   }
