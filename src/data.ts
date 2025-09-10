@@ -64,7 +64,7 @@ export const perfilesMujeres = [
     img: '/alejandra',
     nombre: 'Alejandra',
     edad: '38 años',
-    text: 'hirsutismo.',
+    text: 'Dismenorrea e hirsutismo, sedentaria.',
     box: 'bellaface20'
     ,ref: '6'
   },
